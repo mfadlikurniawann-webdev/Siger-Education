@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Destinations from './components/Destinations';
 import Testimonials from './components/Testimonials';
+import ScholarshipMarquee from './components/ScholarshipMarquee';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { CheckCircle2, Star, Users, Zap } from 'lucide-react';
@@ -15,18 +16,8 @@ function App() {
       <main className="flex-grow">
         <Hero />
         
-        {/* Trusted Partners */}
-        <section className="py-12 bg-slate-50 border-y border-slate-200">
-          <div className="container">
-            <div className="flex flex-wrap justify-center md:justify-between items-center gap-12 opacity-50 grayscale">
-              <span className="font-outfit font-black text-2xl text-slate-900">OXFORD</span>
-              <span className="font-outfit font-black text-2xl text-slate-900">CAMBRIDGE</span>
-              <span className="font-outfit font-black text-2xl text-slate-900">HARVARD</span>
-              <span className="font-outfit font-black text-2xl text-slate-900">STANFORD</span>
-              <span className="font-outfit font-black text-2xl text-slate-900">MONASH</span>
-            </div>
-          </div>
-        </section>
+        {/* Scholarship Partner Marquee (Moving Logos) */}
+        <ScholarshipMarquee />
 
         {/* About Section */}
         <section id="tentangkami" className="py-24 bg-white overflow-hidden">
@@ -37,7 +28,6 @@ function App() {
                 alt="Success Students" 
                 className="rounded-2xl shadow-2xl w-full object-cover"
               />
-              {/* REDESIGNED BADGE: White background for 100% readability */}
               <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100 hidden md:block">
                 <div className="flex items-center gap-5">
                   <div className="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center">
