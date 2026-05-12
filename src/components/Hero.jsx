@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, GraduationCap, CheckCircle } from 'lucide-react';
+import { ArrowRight, GraduationCap, CheckCircle2, Star } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -30,7 +30,7 @@ const Hero = () => {
           <ul className="space-y-3">
             {['Pendaftaran ke 600+ Universitas Dunia', 'Persiapan IELTS/TOEFL dengan Mentor Ahli', 'Layanan Visa 100% Dibantu Hingga Selesai'].map((item, i) => (
               <li key={i} className="flex items-center gap-3 text-slate-700 font-medium">
-                <CheckCircle className="text-emerald-500" size={20} />
+                <CheckCircle2 className="text-emerald-500" size={20} />
                 <span>{item}</span>
               </li>
             ))}
@@ -52,21 +52,26 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
+          <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1000" 
               alt="Education Success" 
               className="w-full aspect-[4/5] object-cover" 
             />
-            {/* STRONGER OVERLAY FOR READABILITY */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
             
-            <div className="absolute bottom-10 left-10 text-white space-y-3 z-10">
-              <div className="flex gap-1.5">
-                {[...Array(5)].map((_, i) => <CheckCircle key={i} size={18} className="text-orange-400 fill-orange-400" />)}
+            {/* REDESIGNED BADGE: White Box for 100% Readability */}
+            <div className="absolute bottom-8 left-8 right-8 bg-white p-8 rounded-2xl shadow-2xl border border-slate-100 z-20">
+              <div className="space-y-3">
+                <div className="flex gap-1">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={18} className="text-orange-400 fill-orange-400" />
+                  ))}
+                </div>
+                <div>
+                  <h4 className="text-2xl md:text-3xl font-outfit font-bold text-slate-900 leading-tight">500+ Siswa Berhasil</h4>
+                  <p className="text-lg text-slate-600 font-medium">Kuliah di Top Universitas Dunia</p>
+                </div>
               </div>
-              <h4 className="text-3xl font-outfit font-bold text-white">500+ Siswa Berhasil</h4>
-              <p className="text-lg text-white/90 font-medium">Kuliah di Top Universitas Dunia</p>
             </div>
           </div>
         </motion.div>
