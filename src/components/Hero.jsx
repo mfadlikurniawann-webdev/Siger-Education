@@ -58,13 +58,15 @@ const Hero = () => {
               alt="Education Success" 
               className="w-full aspect-[4/5] object-cover" 
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
-            <div className="absolute bottom-10 left-10 text-white space-y-2">
-              <div className="flex gap-1">
-                {[...Array(5)].map((_, i) => <CheckCircle key={i} size={14} className="text-orange-400 fill-orange-400" />)}
+            {/* STRONGER OVERLAY FOR READABILITY */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/20 to-transparent"></div>
+            
+            <div className="absolute bottom-10 left-10 text-white space-y-3 z-10">
+              <div className="flex gap-1.5">
+                {[...Array(5)].map((_, i) => <CheckCircle key={i} size={18} className="text-orange-400 fill-orange-400" />)}
               </div>
-              <p className="text-2xl font-outfit font-bold">500+ Siswa Berhasil</p>
-              <p className="text-sm opacity-80">Kuliah di Top Universitas Dunia</p>
+              <h4 className="text-3xl font-outfit font-bold text-white">500+ Siswa Berhasil</h4>
+              <p className="text-lg text-white/90 font-medium">Kuliah di Top Universitas Dunia</p>
             </div>
           </div>
         </motion.div>
