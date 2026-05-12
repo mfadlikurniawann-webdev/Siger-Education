@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* High Contrast Color Palette (Inspired by Schoters & Logo) */
+  --color-primary-dark: #1E205E; /* Deep Navy */
+  --color-primary-light: #F15A29; /* Vibrant Orange */
+  --color-text-title: #0F172A; /* Almost Black */
+  --color-text-body: #334155; /* Slate 700 */
+  --color-text-muted: #64748B; /* Slate 500 */
+  --color-bg-light: #FFFFFF;
+  --color-bg-alt: #F8FAFC;
+  --color-border: #E2E8F0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-inter bg-white text-slate-700 antialiased;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-outfit font-bold text-slate-900 tracking-tight;
+  }
+
+  p {
+    @apply text-slate-600;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-6;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-bold transition-all duration-200 font-outfit;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-light text-white hover:bg-[#D9481B] shadow-lg shadow-orange-200 active:scale-95;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary-dark text-primary-dark hover:bg-primary-dark hover:text-white transition-colors;
+  }
+  
+  .nav-link {
+    @apply font-bold text-slate-900/80 hover:text-primary-light transition-all duration-200 uppercase tracking-widest text-[11px];
+  }
+
+  .card-premium {
+    @apply bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-300 rounded-2xl p-8;
+  }
+}
