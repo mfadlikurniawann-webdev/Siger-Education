@@ -11,12 +11,10 @@ import { CheckCircle2, Star, Users, Zap } from 'lucide-react';
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col font-inter">
+    <div className="min-h-screen flex flex-col font-inter bg-white">
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        
-        {/* Scholarship Partner Marquee (Moving Logos) */}
         <ScholarshipMarquee />
 
         {/* About Section */}
@@ -28,14 +26,14 @@ function App() {
                 alt="Success Students" 
                 className="rounded-2xl shadow-2xl w-full object-cover"
               />
-              <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-slate-100 hidden md:block">
+              <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-neutral-100 hidden md:block">
                 <div className="flex items-center gap-5">
                   <div className="w-16 h-16 bg-orange-50 rounded-xl flex items-center justify-center">
                     <Star className="text-primary-light fill-primary-light" size={32} />
                   </div>
                   <div>
-                    <h4 className="text-4xl font-bold font-outfit text-slate-900 leading-none">4.9/5</h4>
-                    <p className="text-[11px] uppercase tracking-[0.2em] font-black text-slate-400 mt-1">STUDENT SATISFACTION</p>
+                    <h4 className="text-4xl font-bold font-outfit text-black leading-none">4.9/5</h4>
+                    <p className="text-[11px] uppercase tracking-[0.2em] font-black text-neutral-400 mt-1">STUDENT SATISFACTION</p>
                   </div>
                 </div>
               </div>
@@ -46,12 +44,12 @@ function App() {
                 <span className="font-bold uppercase text-primary-light tracking-widest text-xs">
                   Tentang Siger Education
                 </span>
-                <h2 className="text-4xl md:text-6xl font-outfit text-slate-900 leading-[1.1]">
+                <h2 className="text-4xl md:text-6xl font-outfit text-black leading-[1.1]">
                   Pintu Gerbang Anda Menuju Kesuksesan Global
                 </h2>
               </div>
               
-              <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
+              <div className="space-y-6 text-neutral-600 text-lg leading-relaxed">
                 <p>
                   Siger Education lahir dari visi untuk memberikan akses pendidikan berkualitas bagi putra-putri daerah, khususnya di Lampung. Kami percaya bahwa setiap individu memiliki potensi besar yang bisa dikembangkan melalui pendidikan yang tepat.
                 </p>
@@ -67,9 +65,9 @@ function App() {
                   { icon: <Users className="text-primary-light" />, title: "Mentor Ahli" },
                   { icon: <Star className="text-primary-light" />, title: "Terakreditasi" },
                 ].map((item, i) => (
-                  <div key={i} className="flex gap-4 items-center border-b border-slate-100 pb-4">
+                  <div key={i} className="flex gap-4 items-center border-b border-neutral-100 pb-4">
                     {item.icon}
-                    <h4 className="font-bold text-slate-900 text-lg">{item.title}</h4>
+                    <h4 className="font-bold text-black text-lg">{item.title}</h4>
                   </div>
                 ))}
               </div>

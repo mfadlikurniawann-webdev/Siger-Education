@@ -8,19 +8,16 @@ export default {
     extend: {
       colors: {
         primary: {
-          dark: '#1E205E',
+          dark: '#000000',
           light: '#F15A29',
         },
         accent: {
-          purple: '#752E7D',
+          orange: '#D9481B',
         }
       },
       fontFamily: {
         outfit: ['Outfit', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
-      },
-      backgroundImage: {
-        'gradient-main': 'linear-gradient(135deg, #F15A29 0%, #752E7D 50%, #1E205E 100%)',
       }
     },
   },

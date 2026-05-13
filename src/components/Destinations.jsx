@@ -13,14 +13,14 @@ const destinations = [
 
 const Destinations = () => {
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-24 bg-neutral-50">
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="space-y-4">
             <span className="font-bold uppercase text-primary-light tracking-widest text-xs">Destinasi Studi</span>
-            <h2 className="text-4xl md:text-5xl font-outfit text-slate-900">Pilih Negara Impian Anda</h2>
+            <h2 className="text-4xl md:text-5xl font-outfit text-black">Pilih Negara Impian Anda</h2>
           </div>
-          <p className="text-slate-600 max-w-sm mb-2 font-medium">Bekerjasama dengan institusi terkemuka dunia untuk membantu masa depan Anda.</p>
+          <p className="text-neutral-600 max-w-sm mb-2 font-medium">Bekerjasama dengan institusi terkemuka dunia untuk membantu masa depan Anda.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -39,15 +39,15 @@ const Destinations = () => {
                   alt={dest.name} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
                 />
-                <div className="absolute top-4 right-4 bg-white/90 p-2 rounded-lg text-primary-dark">
+                <div className="absolute top-4 right-4 bg-white/90 p-2 rounded-lg text-black">
                   <Globe size={20} />
                 </div>
               </div>
               
               <div className="p-8 flex flex-col flex-grow bg-white">
-                <h4 className="text-2xl font-bold font-outfit text-slate-900 mb-2">{dest.name}</h4>
-                <p className="text-slate-600 font-medium mb-6">{dest.desc}</p>
-                <div className="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between group-hover:text-primary-light transition-colors">
+                <h4 className="text-2xl font-bold font-outfit text-black mb-2">{dest.name}</h4>
+                <p className="text-neutral-600 font-medium mb-6">{dest.desc}</p>
+                <div className="mt-auto pt-4 border-t border-neutral-100 flex items-center justify-between group-hover:text-primary-light transition-colors">
                   <span className="text-sm font-bold uppercase tracking-widest">Detail Program</span>
                   <ArrowRight size={18} />
                 </div>
