@@ -1,0 +1,13 @@
+export { default as Navbar } from './components/Navbar.jsx';
+export { default as Hero } from './components/Hero.jsx';
+export { default as About } from './components/About.jsx';
+export { default as Services } from './components/Services.jsx';
+export { default as Destinations } from './components/Destinations.jsx';
+export { default as Testimonials } from './components/Testimonials.jsx';
+export { default as ScholarshipMarquee } from './components/ScholarshipMarquee.jsx';
+export { default as Contact } from './components/Contact.jsx';
+export { default as Footer } from './components/Footer.jsx';
+export { default as Button } from './components/UI/Button.jsx';
+export { default as Input } from './components/UI/Input.jsx';
+export { default as Select } from './components/UI/Select.jsx';
+export { default as Section } from './components/UI/Section.jsx';
