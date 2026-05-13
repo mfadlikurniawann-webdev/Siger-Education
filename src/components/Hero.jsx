@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, GraduationCap, CheckCircle2, Star } from 'lucide-react';
+import Button from './UI/Button';
 
 const Hero = () => {
   return (
@@ -37,12 +38,12 @@ const Hero = () => {
           </ul>
           
           <div className="flex flex-wrap gap-4 pt-4">
-            <button className="btn btn-primary text-lg px-12 py-5">
-              Konsultasi Gratis <ArrowRight size={22} className="ml-2" />
-            </button>
-            <button className="btn border-2 border-black text-black hover:bg-black hover:text-white text-lg px-12 py-5 transition-colors">
+            <Button variant="primary" className="text-lg px-12 py-5" icon={ArrowRight}>
+              Konsultasi Gratis
+            </Button>
+            <Button variant="outline" className="text-lg px-12 py-5">
               Lihat Layanan
-            </button>
+            </Button>
           </div>
         </motion.div>
 

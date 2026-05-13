@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Compass, BookOpen, CreditCard, Award, Languages, Users, ChevronRight } from 'lucide-react';
+import Section from './UI/Section';
 
 const services = [
   {
@@ -37,39 +38,37 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-24 bg-neutral-50" id="services">
-      <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-          <span className="font-bold uppercase text-primary-light tracking-widest text-xs">Layanan Unggulan</span>
-          <h2 className="text-4xl md:text-5xl font-outfit text-black">Solusi Pendidikan Lengkap</h2>
-          <p className="text-neutral-600 text-lg">Pilih layanan yang paling sesuai dengan kebutuhan persiapan studi Anda.</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <motion.div 
-              key={index}
-              className="bg-white p-10 rounded-2xl border border-neutral-200 hover:border-primary-light transition-all duration-300 group shadow-sm hover:shadow-xl"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-14 h-14 bg-neutral-100 text-black group-hover:bg-primary-light group-hover:text-white rounded-xl flex items-center justify-center mb-8 transition-colors">
-                {service.icon}
-              </div>
-              
-              <h3 className="text-2xl font-outfit font-bold text-black mb-4 group-hover:text-primary-light transition-colors">{service.title}</h3>
-              <p className="text-neutral-600 leading-relaxed mb-8">{service.description}</p>
-              
-              <a href="#contact" className="inline-flex items-center gap-2 font-bold text-sm text-black hover:text-primary-light transition-colors uppercase tracking-widest">
-                Detail Layanan <ChevronRight size={16} />
-              </a>
-            </motion.div>
-          ))}
-        </div>
+    <Section id="services" bg="neutral">
+      <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
+        <span className="font-bold uppercase text-primary-light tracking-widest text-xs">Layanan Unggulan</span>
+        <h2 className="text-4xl md:text-5xl font-outfit text-black">Solusi Pendidikan Lengkap</h2>
+        <p className="text-neutral-600 text-lg">Pilih layanan yang paling sesuai dengan kebutuhan persiapan studi Anda.</p>
       </div>
-    </section>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service, index) => (
+          <motion.div 
+            key={index}
+            className="bg-white p-10 rounded-2xl border border-neutral-200 hover:border-primary-light transition-all duration-300 group shadow-sm hover:shadow-xl"
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+          >
+            <div className="w-14 h-14 bg-neutral-100 text-black group-hover:bg-primary-light group-hover:text-white rounded-xl flex items-center justify-center mb-8 transition-colors">
+              {service.icon}
+            </div>
+            
+            <h3 className="text-2xl font-outfit font-bold text-black mb-4 group-hover:text-primary-light transition-colors">{service.title}</h3>
+            <p className="text-neutral-600 leading-relaxed mb-8">{service.description}</p>
+            
+            <a href="#contact" className="inline-flex items-center gap-2 font-bold text-sm text-black hover:text-primary-light transition-colors uppercase tracking-widest">
+              Detail Layanan <ChevronRight size={16} />
+            </a>
+          </motion.div>
+        ))}
+      </div>
+    </Section>
   );
 };
 
